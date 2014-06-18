@@ -23,4 +23,4 @@ RUN /etc/init.d/sshd start
 RUN /etc/init.d/sshd stop
 
 EXPOSE 22
-CMD ["/usr/sbin/sshd", "-D"]
+#CMD ["/usr/sbin/sshd", "-D"]
