@@ -5,16 +5,17 @@
 FROM centos
 MAINTAINER Takahiro Yano <speg03@gmail.com>
 
-RUN yum install -y sudo openssh-server
+RUN yum install -y openssh-server sudo
 
 RUN useradd docker
 RUN passwd -uf docker
-RUN mkdir -p /home/docker/.ssh
-ADD id_rsa_docker.pub /home/docker/.ssh/authorized_keys
 
-RUN chown -R docker:docker /home/docker/.ssh
-RUN chmod 0700 /home/docker/.ssh
-RUN chmod 0600 /home/docker/.ssh/authorized_keys
+WORKDIR /home/docker
+
+RUN mkdir .ssh
+ADD id_rsa_docker .ssh/id_rsa_docker
+ADD id_rsa_docker.pub .ssh/authorized_keys
+RUN chown -R docker:docker .ssh && chmod 0700 .ssh && chmod 0600 .ssh/*
 
 RUN echo "docker  ALL=(ALL) ALL" >>/etc/sudoers.d/docker
 
