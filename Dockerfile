@@ -5,7 +5,6 @@
 FROM centos
 MAINTAINER Takahiro Yano <speg03@gmail.com>
 
-RUN yum update -y
 RUN yum install -y sudo openssh-server
 
 RUN useradd docker
