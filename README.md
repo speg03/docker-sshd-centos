@@ -1,8 +1,8 @@
 docker-sshd-centos
 ==================
 
-Info
-----
+About
+-----
 
 This is a docker image running sshd on latest CentOS.
 
@@ -33,5 +33,5 @@ ssh -i ~/.ssh/id_rsa_docker -l docker -p 2222 localhost
 
 The below message has shown when execute `docker cp`. This is no problems.
 ```
-2014/06/19 12:07:27 lchown /home/yano/.ssh/id_rsa_docker: operation not permitted
+2014/06/19 12:07:27 lchown /home/speg03/.ssh/id_rsa_docker: operation not permitted
 ```
