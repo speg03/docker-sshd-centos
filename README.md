@@ -20,7 +20,7 @@ My build environment
 * Ubuntu 14.04 LTS
 * Docker 0.9.1
 
-```text
+```
 git clone https://github.com/speg03/docker-sshd-centos.git
 cd docker-sshd-centos
 docker build --no-cache -t speg03/sshd-centos .
@@ -32,6 +32,7 @@ ssh -i ~/.ssh/id_rsa_docker -l docker -p 2222 localhost
 ```
 
 The below message has shown when execute `docker cp`. This is no problems.
+
 ```
 2014/06/19 12:07:27 lchown /home/speg03/.ssh/id_rsa_docker: operation not permitted
 ```
