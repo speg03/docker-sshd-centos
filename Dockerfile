@@ -2,7 +2,7 @@
 #
 # VERSION  0.0.1
 
-FROM centos
+FROM centos6
 MAINTAINER Takahiro Yano <speg03@gmail.com>
 
 RUN yum install -y openssh-server sudo
