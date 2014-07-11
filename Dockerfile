@@ -2,13 +2,12 @@
 #
 # VERSION  0.0.1
 
-FROM centos6
+FROM centos:centos6
 MAINTAINER Takahiro Yano <speg03@gmail.com>
 
 RUN yum install -y openssh-server sudo
 
 RUN useradd docker
-RUN passwd -uf docker
 
 WORKDIR /home/docker
 
